@@ -3,6 +3,27 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@layer utilities {
+  .animate-fade-in-out {
+    animation: fadeInOut 4s ease-in-out forwards;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
